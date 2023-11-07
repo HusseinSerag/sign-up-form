@@ -154,7 +154,30 @@ input:focus{
     color:#4B6F44;
 }
 
+.error{
+    border-color: red;
+}
+.right{
+    border-color: green;
+}
+.error:first-of-type +span{
+    position: relative;
+}
 
+.error:first-of-type +span::after{
+    content:"Passwords don't match";
+    position: absolute;
+    font-size: 0.7rem;
+    width:120px;
+    color:red;
+}
+.right:first-of-type +span::after{
+    content:"Passwords match";
+    position: absolute;
+    font-size: 0.7rem;
+    width:120px;
+    color:green;
+}
 @media only screen and (max-width:768px){
     body{
         height: auto;
@@ -208,4 +231,23 @@ input:focus{
         font-size: min(16px , 5px + 2vw);
     }
     
+    .error:first-of-type +span{
+        position: relative;
+    }
+    .error:first-of-type +span::after{
+        content:"Passwords don't match";
+        position: absolute;
+        font-size: 0.6rem;
+        width:100px;
+        left:-70px;
+        color:red;
+    }
+    .right:first-of-type +span::after{
+        content:"Passwords don't match";
+        position: absolute;
+        font-size: 0.6rem;
+        width:100px;
+        left:-70px;
+        color:green
+    }
 }
