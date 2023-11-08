@@ -55,7 +55,7 @@ body{
 }
 .transparent .text{
     color:white;
-    font-size:min(120px,10vw);
+    font-size:min(120px,10vw,10vh);
 }
 .transparent > img{
     height: 90%;
@@ -234,7 +234,7 @@ input:focus{
     .error:first-of-type +span{
         position: relative;
     }
-    .error:first-of-type +span::after{
+    .error:first-of-type + span::after{
         content:"Passwords don't match";
         position: absolute;
         font-size: 0.6rem;
@@ -242,12 +242,12 @@ input:focus{
         left:-70px;
         color:red;
     }
-    .right:first-of-type +span::after{
-        content:"Passwords don't match";
+    .right:first-of-type + span::after{
+        content:"Passwords match";
         position: absolute;
         font-size: 0.6rem;
         width:100px;
-        left:-70px;
+        left:-20px;
         color:green
     }
 }
